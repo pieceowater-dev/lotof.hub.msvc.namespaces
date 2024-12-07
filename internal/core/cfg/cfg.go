@@ -1,6 +1,7 @@
 package cfg
 
 import (
+	"app/internal/core/models"
 	"fmt"
 	"github.com/joho/godotenv"
 	"os"
@@ -27,12 +28,16 @@ func Inst() *Config {
 		}
 
 		instance = &Config{
-			GrpcPort:            getEnv("GRPC_PORT", "50051"),
-			RestPort:            getEnv("REST_PORT", "3000"),
-			PostgresDatabaseDSN: getEnv("POSTGRES_DB_DSN", "postgres://pieceouser:pieceopassword@localhost:5432/sample?sslmode=disable"),
-			PostgresModels:      []any{
+			GrpcPort: getEnv("GRPC_PORT", "50052"),
+			RestPort: getEnv("REST_PORT", "3000"),
+
+			PostgresDatabaseDSN: getEnv("POSTGRES_DB_DSN", "postgres://pieceouser:pieceopassword@localhost:5432/users?sslmode=disable"),
+			PostgresModels: []any{
 				// models to migration here:
 				// &ent.MyModel{},
+				&models.Member{},
+				&models.Namespace{},
+				&models.Service{},
 			},
 		}
 	})

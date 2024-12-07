@@ -1,31 +1,37 @@
 package pkg
 
 import (
-	pb "app/internal/core/grpc/generated"
-	"app/internal/pkg/todo"
+	"app/internal/pkg/member"
+	//pb "app/internal/core/grpc/generated"
+	"app/internal/pkg/ns"
+	"app/internal/pkg/service"
 	"github.com/gin-gonic/gin"
 	"google.golang.org/grpc"
 )
 
 type Router struct {
-	todoModule *todo.Module
+	nsModule      *ns.Module
+	memberModule  *member.Module
+	serviceModule *service.Module
 }
 
 func NewRouter() *Router {
 	return &Router{
-		todoModule: todo.New(),
+		nsModule:      ns.New(),
+		memberModule:  member.New(),
+		serviceModule: service.New(),
 	}
 }
 
 func (r *Router) Init(grpcServer *grpc.Server) {
 	// Register gRPC services
-	pb.RegisterTodoServiceServer(grpcServer, r.todoModule.Controller)
+	//pb.RegisterNamespaceServiceServer(grpcServer, r.todoModule.Controller)
 }
 
 // InitGRPC initializes gRPC routes
 func (r *Router) InitGRPC(grpcServer *grpc.Server) {
 	// Register gRPC services
-	pb.RegisterTodoServiceServer(grpcServer, r.todoModule.Controller)
+	//pb.RegisterNamespaceServiceServer(grpcServer, r.todoModule.Controller)
 }
 
 // InitREST initializes REST routes using Gin

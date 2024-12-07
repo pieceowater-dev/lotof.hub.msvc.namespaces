@@ -1,32 +1,31 @@
-package todo
+package ns
 
 import (
 	"app/internal/core/cfg"
-	"app/internal/pkg/todo/ctrl"
-	"app/internal/pkg/todo/svc"
+	"app/internal/pkg/ns/ctrl"
+	"app/internal/pkg/ns/svc"
 	gossiper "github.com/pieceowater-dev/lotof.lib.gossiper/v2"
 	"log"
 )
 
 type Module struct {
-	Controller *ctrl.TodoController
+	Controller *ctrl.NSController
 }
 
 func New() *Module {
-	// Create database instance
 	database, err := gossiper.NewDB(
 		gossiper.PostgresDB,
 		cfg.Inst().PostgresDatabaseDSN,
 		false,
+		[]any{},
 	)
 	if err != nil {
 		log.Fatalf("Failed to create database instance: %v", err)
 	}
 
-	// Initialize and return the module
 	return &Module{
-		Controller: ctrl.NewTodoController(
-			svc.NewTodoService(database),
+		Controller: ctrl.NewNSController(
+			svc.NewNSService(database),
 		),
 	}
 }
