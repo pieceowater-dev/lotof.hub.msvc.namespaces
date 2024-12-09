@@ -1,7 +1,8 @@
 package cfg
 
 import (
-	"app/internal/core/models"
+	ent2 "app/internal/pkg/member/ent"
+	"app/internal/pkg/ns/ent"
 	"fmt"
 	"github.com/joho/godotenv"
 	"os"
@@ -35,9 +36,8 @@ func Inst() *Config {
 			PostgresModels: []any{
 				// models to migration here:
 				// &ent.MyModel{},
-				&models.Member{},
-				&models.Namespace{},
-				&models.Service{},
+				&ent2.Member{},
+				&ent.Namespace{},
 			},
 		}
 	})

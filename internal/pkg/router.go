@@ -4,22 +4,19 @@ import (
 	"app/internal/pkg/member"
 	//pb "app/internal/core/grpc/generated"
 	"app/internal/pkg/ns"
-	"app/internal/pkg/service"
 	"github.com/gin-gonic/gin"
 	"google.golang.org/grpc"
 )
 
 type Router struct {
-	nsModule      *ns.Module
-	memberModule  *member.Module
-	serviceModule *service.Module
+	nsModule     *ns.Module
+	memberModule *member.Module
 }
 
 func NewRouter() *Router {
 	return &Router{
-		nsModule:      ns.New(),
-		memberModule:  member.New(),
-		serviceModule: service.New(),
+		nsModule:     ns.New(),
+		memberModule: member.New(),
 	}
 }
 
