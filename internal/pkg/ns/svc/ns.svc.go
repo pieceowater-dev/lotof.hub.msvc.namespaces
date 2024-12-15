@@ -18,12 +18,19 @@ func (s NSService) GetNamespaces(filter gossiper.Filter[string]) (*[]ent.Namespa
 	var namespaces []ent.Namespace
 	var count int64
 
+	if filter.Pagination.Page < 1 {
+		filter.Pagination.Page = 1
+	}
+	if filter.Pagination.Length < 1 {
+		filter.Pagination.Length = 10
+	}
+
 	query := s.db.GetDB().Model(&ent.Namespace{})
 
 	// Apply search filters
 	if filter.Search != "" {
 		search := "%" + filter.Search + "%"
-		query = query.Where("title LIKE ?", search, search)
+		query = query.Where("title LIKE ?", search)
 	}
 
 	// Count total records

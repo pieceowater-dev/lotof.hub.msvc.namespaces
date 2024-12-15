@@ -21,6 +21,8 @@ github.com/Azure/azure-sdk-for-go/sdk/security/keyvault/internal v1.0.0/go.mod h
 github.com/AzureAD/microsoft-authentication-library-for-go v1.1.1/go.mod h1:wP83P5OoQ5p6ip3ScPr0BAq0BvuPAvacpEuSzyouqAI=
 github.com/AzureAD/microsoft-authentication-library-for-go v1.2.1 h1:DzHpqpoJVaCgOUdVHxE8QB52S6NiVdDQvGlny1qvPqA=
 github.com/AzureAD/microsoft-authentication-library-for-go v1.2.1/go.mod h1:wP83P5OoQ5p6ip3ScPr0BAq0BvuPAvacpEuSzyouqAI=
+github.com/axgle/mahonia v0.0.0-20180208002826-3358181d7394 h1:OYA+5W64v3OgClL+IrOD63t4i/RW7RqrAVl9LTZ9UqQ=
+github.com/axgle/mahonia v0.0.0-20180208002826-3358181d7394/go.mod h1:Q8n74mJTIgjX4RBBcHnJ05h//6/k6foqmgE45jTQtxg=
 github.com/bytedance/sonic v1.11.6 h1:oUp34TzMlL+OY1OUWxHqsdkgC/Zfc85zGqw9siXjrc0=
 github.com/bytedance/sonic v1.11.6/go.mod h1:LysEHSvpvDySVdC2f87zGWf6CIKJcAvqab1ZaiQtds4=
 github.com/bytedance/sonic/loader v0.1.1 h1:c+e5Pt1k/cy5wMveRDyk2X4B9hF4g7an8N3zCYjJFNM=
@@ -122,10 +124,7 @@ github.com/modocache/gover v0.0.0-20171022184752-b58185e213c5/go.mod h1:caMODM3P
 github.com/montanaflynn/stats v0.7.0/go.mod h1:etXPPgVO6n31NxCd9KQUMvCM+ve0ruNzt6R8Bnaayow=
 github.com/pelletier/go-toml/v2 v2.2.2 h1:aYUidT7k73Pcl9nb2gScu7NSrKCSHIDE89b3+6Wq+LM=
 github.com/pelletier/go-toml/v2 v2.2.2/go.mod h1:1t835xjRzz80PqgE6HHgN2JOsmgYu/h4qDAS4n929Rs=
-github.com/pieceowater-dev/lotof.hub.proto v0.0.26 h1:e1jGTiV5QFkd8bpUjw8vSjeMA7cPbEoISGUtSqzrIro=
-github.com/pieceowater-dev/lotof.hub.proto v0.0.26/go.mod h1:9uwfvIUGGzTrTIVzQ4gH8hmrRC8sgtnLUhyPN5swIME=
-github.com/pieceowater-dev/lotof.hub.proto v0.0.34 h1:7r9ZMygmcdYPYRokaqr2iK1qg40LtEmnxsV2KS20+d8=
-github.com/pieceowater-dev/lotof.hub.proto v0.0.34/go.mod h1:9uwfvIUGGzTrTIVzQ4gH8hmrRC8sgtnLUhyPN5swIME=
+github.com/pieceowater-dev/lotof.hub.proto v0.0.35 h1:QF0fBCQVPCOVnxzibCQAU3OIIBmG5wJ1W1hfTviB5uY=
 github.com/pieceowater-dev/lotof.hub.proto v0.0.35/go.mod h1:9uwfvIUGGzTrTIVzQ4gH8hmrRC8sgtnLUhyPN5swIME=
 github.com/pieceowater-dev/lotof.lib.gossiper/v2 v2.0.6 h1:5WEnZAd/hwMDAL8sVUoL+zO4wWeQetVO4Zo+NgxzC80=
 github.com/pieceowater-dev/lotof.lib.gossiper/v2 v2.0.6/go.mod h1:m/C+3z+Y2n9FPnakJl7jOl/4T1KfrE2/OhSslRKAGGc=
