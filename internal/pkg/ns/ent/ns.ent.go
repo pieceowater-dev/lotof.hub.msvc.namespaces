@@ -5,9 +5,12 @@ import (
 	"gorm.io/gorm"
 )
 
+//user -> []member -> []namespace
+
 type NSMember struct {
-	ID     uuid.UUID
-	UserID uuid.UUID
+	ID        uuid.UUID
+	UserID    uuid.UUID
+	Namespace uuid.UUID
 }
 
 type Namespace struct {

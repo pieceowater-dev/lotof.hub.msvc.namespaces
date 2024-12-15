@@ -6,7 +6,6 @@ import (
 	"gorm.io/gorm"
 )
 
-// Member структура
 type Member struct {
 	gorm.Model
 	ID         uuid.UUID        `gorm:"type:uuid;primaryKey"`
